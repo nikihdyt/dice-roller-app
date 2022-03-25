@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
     // acak dadu dan perbarui tampilan layar sesuai dengan hasil acakan dadu
     private fun rollDice() {
         // membuat objek Dice baru dengan 6 sisi dan mengacaknya
-        val dice0 = Dice0(6)
+        val dice0 = Dice(6)
         val diceRolled = dice0.roll()
 
         // menemukan ImageView di dalam layout
@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
 }
 
 // membuat class untuk merandom nilai dadu yang akan muncul
-class Dice0(private val numSides: Int) {
+class Dice(private val numSides: Int) {
     fun roll(): Int {
         return (1..numSides).random()
     }
