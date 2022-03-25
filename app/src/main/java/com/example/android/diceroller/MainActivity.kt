@@ -4,8 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
-import org.w3c.dom.Text
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,16 +31,18 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    // method rollDice digunakan untuk menampilkan isi TextView
     private fun rollDice() {
-        //mengatur dadu pertama
+        // membuat objek Dice baru dengan 6 sisi dan merandomnya
         val dice0 = Dice0(6)
         val diceRolled = dice0.roll()
-        // mengupdate TextView yang ber id textView agar berubah sesuai fungsi rollDice()
+        // mengupdate isi TextView yang ber id textView agar berubah sesuai dengan hasil angka random
         val resultTextView0: TextView = findViewById(R.id.textView)
         resultTextView0.text = diceRolled.toString()
 
-        //mengatur dadu kedua
+        // membuat objek Dice baru dengan 6 sisi
         val dice1 = Dice1(6)
+        // merandom sisi dadu dan mengupdate isi TextView yang ber id textView2
         val resultTextView1: TextView = findViewById(R.id.textView2)
         resultTextView1.text = dice1.roll().toString()
 
@@ -56,6 +56,7 @@ class Dice0(private val numSides: Int) {
         return (1..numSides).random()
     }
 }
+
 class Dice1(private val numSides: Int) {
     fun roll(): Int {
         return (1..numSides).random()
