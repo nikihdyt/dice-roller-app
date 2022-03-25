@@ -23,6 +23,10 @@ class MainActivity : AppCompatActivity() {
             //val resultTextView: TextView = findViewById(R.id.textView)
             //resultTextView.text = "6"
 
+            // mengatur tulisan "Dadu 1" dan "Dadu 2" agar tampil
+            val resultTextView3: TextView = findViewById(R.id.textView3)
+            val resultTextView4: TextView = findViewById(R.id.textView4)
+
             // kode dibawah membuat fungsi rollDice() dijalankan saat rollButton di klik
             rollDice()
 
